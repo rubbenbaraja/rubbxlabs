@@ -1,0 +1,9 @@
+Taruh foto kenangan di folder ini.
+
+Nama berkas harus sama dengan yang tertulis di config.js, misalnya:
+  kenangan-1.jpg, kenangan-2.jpg, kenangan-3.jpg, kenangan-4.jpg
+
+Tips:
+- Pakai format .jpg, ukuran sekitar 1200 piksel di sisi terpanjang, di bawah 500 KB per foto.
+- Foto berbentuk landscape (melebar) atau hampir persegi paling pas. Foto tegak dipotong otomatis di bagian atas dan bawah.
+- Huruf besar dan kecil di nama berkas berpengaruh di hosting (Foto.JPG tidak sama dengan foto.jpg).

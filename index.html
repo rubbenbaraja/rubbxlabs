@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kado Ulang Tahun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<section id="cover" aria-label="Kejutan ulang tahun">
+  <div class="cover-inner">
+    <p class="eyebrow" id="cover-eyebrow">Sebuah kejutan kecil untukmu</p>
+    <h1>
+      <span class="greet">Selamat Ulang Tahun</span><br>
+      <span class="name" id="cover-name">Sayang</span>
+    </h1>
+    <svg class="heart-rule" viewBox="0 0 72 14" fill="none" aria-hidden="true">
+      <path d="M0 7h28M44 7h28" stroke="currentColor" stroke-width="1"/>
+      <path d="M36 12c-5-3.6-8-6-8-8.6C28 1.4 29.600.4 31.300.4c1.900 0 3.700 1.100 4.700 2.900 1-1.800 2.800-2.900 4.700-2.900 1.700 0 3.300 1 3.300 3 0 2.600-3 5-8 8.600z" fill="currentColor"/>
+    </svg>
+    <p class="cover-note">ada sesuatu yang udah ak siapin buat kamu. Klik aja tombol nya :b</p>
+    <button class="btn" id="open-btn" type="button">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.500-4.600-9.600-9.300C.9 8.300 2.800 4.500 6.500 4.500c2.200 0 4.100 1.200 5.500 3.200 1.400-2 3.300-3.200 5.500-3.200 3.700 0 5.600 3.800 4.100 7.200C19.500 16.400 12 21 12 21z"/></svg>
+      
+    </button>
+  </div>
+</section>
+
+<main id="main" hidden>
+  <section class="sect hero" aria-labelledby="hero-title">
+    <p class="eyebrow">Hari ini punya kamu, Sayang</p>
+    <h2 id="hero-title" tabindex="-1">Terima kasih sudah hadir di dunia yang fana ini</h2>
+    <div class="days" id="days" hidden>
+      <span class="num" id="days-num">0</span>
+      <span class="unit">hari kita sudah berjalan bersama</span>
+    </div>
+  </section>
+
+  <section class="sect" aria-labelledby="letter-title">
+    <p class="eyebrow">Surat digital</p>
+    <h2 id="letter-title">Sepucuk kutipan surat yang ga bermakna ini untukmu</h2>
+    <div class="env-stage">
+      <button class="env" id="env" type="button" aria-expanded="false" aria-controls="letter" aria-label="Buka amplop surat">
+        <span class="env-back"></span>
+        <span class="env-mini"></span>
+        <span class="env-pocket"></span>
+        <span class="env-flap"></span>
+        <span class="env-seal"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.500-4.600-9.600-9.300C.9 8.300 2.800 4.500 6.500 4.500c2.200 0 4.100 1.200 5.500 3.200 1.400-2 3.300-3.200 5.500-3.200 3.700 0 5.600 3.800 4.100 7.200C19.500 16.400 12 21 12 21z"/></svg></span>
+      </button>
+      <p class="env-hint" id="env-hint">Ketuk amplop untuk membukanya</p>
+    </div>
+    <div class="paper-wrap" id="paper-wrap">
+      <div class="paper-clip">
+        <article class="paper" id="letter" inert>
+          <h3 id="letter-greet">Untuk Sayang,</h3>
+          <div id="letter-body"></div>
+          <p class="sign">Dengan sepenuh hati,<strong id="letter-from">Aku</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect" aria-labelledby="gallery-title">
+    <p class="eyebrow">Galeri kenangan</p>
+    <h2 id="gallery-title">Perjalanan kita</h2>
+    <p class="sect-intro">Beberapa momen yang selalu kuingat, disusun dari yang paling awal.</p>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section class="sect" aria-labelledby="wish-title">
+    <p class="eyebrow">Kotak harapan</p>
+    <h2 id="wish-title">Balas kejutan kecil ini</h2>
+    <p class="sect-intro">Tulis ucapan, harapan, atau balasan kamu.</p>
+    <div class="wish">
+      <label for="wish-text">Pesan atau harapanmu</label>
+      <textarea id="wish-text" maxlength="600" placeholder="Tulis di sini..."></textarea>
+      <div class="row">
+        <span class="count" id="wish-count">0 / 600</span>
+        <a class="btn" id="wa-link" href="https://wa.me/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21l1.500-5.200A9.500 9.500 0 1 1 8 19.600L2 21zm5.700-3.400l.4.200a7.600 7.600 0 1 0-2.500-2.400l.2.400-.8 2.800 2.700-1z"/></svg>
+          send
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer class="end" id="end-note">Dibuat dengan sepenuh hati.</footer>
+</main>
+
+<button class="fab" id="fab" type="button" aria-pressed="false" aria-label="Putar musik" hidden>
+  <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+  <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+</button>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

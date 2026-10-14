@@ -1,0 +1,5 @@
+Taruh lagu favorit di folder ini dengan nama lagu.mp3.
+
+Kalau mau memakai nama lain, ubah juga baris audioSrc di config.js.
+Kalau berkas lagu tidak ada, halaman memutar musik kotak musik bawaan.
+Pakai lagu yang kamu miliki atau berhak kamu bagikan, dan usahakan ukurannya di bawah 6 MB.
