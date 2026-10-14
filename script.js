@@ -13,7 +13,7 @@
   $('cover-name').textContent = 'Sayang';
   $('letter-greet').textContent = 'Untuk Amelia Syafitri,';
   $('letter-from').textContent = CONFIG.pengirim;
-  $('end-note').textContent = 'Dibuat dengan sepenuh hati untuk Amelia Syafitri "AKA Mba Fit".';
+  $('end-note').textContent = 'Dibuat dengan sepenuh hati untuk Amelia Syafitri AKA Mba Fit.';
 
   var body = $('letter-body');
   CONFIG.surat.forEach(function (t) {
